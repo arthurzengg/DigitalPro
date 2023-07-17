@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="jumbotron text-center">
+    <h1>Welcome to My Search Page</h1>
+    <form class="form-inline justify-content-center" action="{{ url_for('core.index') }}" method="get">
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="search" class="sr-only">Search</label>
+        <input type="text" class="form-control" id="search" name="q" placeholder="Search">
+      </div>
+      <button type="submit" class="btn btn-primary mb-2">Submit</button>
+    </form>
+  </div>
+{% endblock %}
